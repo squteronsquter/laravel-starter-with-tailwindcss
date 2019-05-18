@@ -7,9 +7,9 @@ laravel new tailwindcss-laravel
 cd tailwindcss-laravel
 ```
 
-### check if deafault installation is working
+### Check if deafault installation is working
 
-### install laravel default dependencies
+### Install laravel default dependencies
 
 ```
 npm install
@@ -134,6 +134,6 @@ php artisan serve
 npm run prod
 ```
 
-### Files included are samples you can use to replace copy into your original files as per instructions above.
+### Files included are samples you can use to replace or copy into your original files as per instructions above.
 
 **_Happy coding_**
