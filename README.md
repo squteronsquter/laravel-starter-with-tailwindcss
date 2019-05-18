@@ -134,3 +134,6 @@ php artisan serve
 npm run prod
 ```
 
+### Files included are samples you can use to replace copy into your original files as per instructions above.
+
+**_Happy coding_**
