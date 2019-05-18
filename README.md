@@ -136,10 +136,10 @@ npm run prod
 
 #### To reduce the size of Tailwind CSS output file in production use PurgeCSS
 
-#### Add PurgeCSS by installing laravel-mix-purgecss as dependency
+#### Add PurgeCSS by installing postcss-purgecss & laravel-mix-purgecss as dependency
 
 ```
-npm install laravel-mix-purgecss
+npm install @fullhuman/postcss-purgecss laravel-mix-purgecss
 ```
 
 #### Include it in the webpack.mix.js file like that
