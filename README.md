@@ -61,15 +61,16 @@ postCss: [tailwindcss('./tailwind.config.js')]
     <body class="bg-gray-900 text-white">
         <div id="app" class="container mx-auto p-4">
             <custom-component></custom-component>
-            <h1 class="text-6xl">Welcome to Laravel with Tailwind</h1>
+            <h1 class="text-6xl">Welcome to Laravel with Tailwind & Purge CSS</h1>
             <p class="italic text-3xl">Tailwind CSS is pretty awesome!</p>
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">This text is responsvie. Check it out for various screens.</p>
             <example-component></example-component>
         </div>
 
-        <script src="/js/app.js"></script>
+        <script src="{{ mix('js/manifest.js') }}"></script>
+        <script src="{{ mix('js/vendor.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
-
 </html>
 ```
 
@@ -139,7 +140,8 @@ npm run prod
 #### Add PurgeCSS by installing postcss-purgecss & laravel-mix-purgecss as dependency
 
 ```
-npm install @fullhuman/postcss-purgecss laravel-mix-purgecss
+npm install @fullhuman/postcss-purgecss
+npm install laravel-mix-purgecss
 ```
 
 #### Include it in the webpack.mix.js file like that
@@ -155,6 +157,8 @@ mix.js('resources/js/app.js', 'public/js')
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.config.js')]
     })
+    .extract()
+    .version()
     .purgeCss();
 ```
 

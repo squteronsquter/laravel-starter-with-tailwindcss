@@ -10,4 +10,5 @@ mix
     postCss: [tailwindcss('./tailwind.config.js')]
   })
   .extract()
+  .version()
   .purgeCss();
