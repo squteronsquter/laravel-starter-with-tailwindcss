@@ -16,8 +16,8 @@
             <example-component></example-component>
         </div>
 
-        <script src="/js/manifest.js"></script>
-        <script src="/js/vendor.js"></script>
-        <script src="/js/app.js"></script>
+        <script src="{{ mix('js/manifest.js') }}"></script>
+        <script src="{{ mix('js/vendor.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
