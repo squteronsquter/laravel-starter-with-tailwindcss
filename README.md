@@ -134,6 +134,36 @@ php artisan serve
 npm run prod
 ```
 
+#### To reduce the size of Tailwind CSS output file in production use PurgeCSS
+
+#### Add PurgeCSS by installing laravel-mix-purgecss as dependency
+
+```
+npm install laravel-mix-purgecss
+```
+
+#### Include it in the webpack.mix.js file like that
+
+```
+const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
+require('laravel-mix-purgecss');
+
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .options({
+        processCssUrls: false,
+        postCss: [tailwindcss('./tailwind.config.js')]
+    })
+    .purgeCss();
+```
+
+#### Run production build and check the size of the generated app.css file. Should be a lot smaller than the usual ca. 325 kb
+
+```
+npm run prod
+```
+
 #### Files included are samples you can use to replace or copy into your original files as per instructions above
 
 **_Happy coding_**
