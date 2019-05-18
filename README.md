@@ -1,15 +1,15 @@
 # Starter setup for Laravel with Tailwind CSS
 
-### Create a new laravel application as you would usually do
+#### Create a new laravel application as you would usually do
 
 ```
 laravel new tailwindcss-laravel
 cd tailwindcss-laravel
 ```
 
-### Check if deafault installation is working
+#### Check if deafault installation is working
 
-### Install laravel default dependencies
+#### Install laravel default dependencies
 
 ```
 npm install
@@ -18,13 +18,13 @@ php artisan serve
 http://localhost:8000
 ```
 
-### Install additional dependencies
+#### Install additional dependencies
 
 ```
 npm install tailwindcss laravel-mix-tailwind --save-dev
 ```
 
-### Edit webpack.mix.js;
+#### Edit webpack.mix.js
 
 ```
 const mix = require('laravel-mix');
@@ -37,7 +37,7 @@ postCss: [tailwindcss('./tailwind.config.js')]
 });
 ```
 
-### Edit /resources/sass/app.scss
+#### Edit /resources/sass/app.scss
 
 ```
 // Import tailwindcss with pastcss preprocessing
@@ -46,7 +46,7 @@ postCss: [tailwindcss('./tailwind.config.js')]
 @import '~tailwindcss/utilities';
 ```
 
-### Edit /resources/views/welcome.blade.php
+#### Edit /resources/views/welcome.blade.php
 
 ```
 <!doctype html>
@@ -73,13 +73,13 @@ postCss: [tailwindcss('./tailwind.config.js')]
 </html>
 ```
 
-### Add new vue component in /resources/js/components/
+#### Add new vue component in /resources/js/components/
 
 ```
 touch /resources/js/components/CustomComponent.vue
 ```
 
-### Inside this file:
+#### Inside this file
 
 ```
 <template>
@@ -101,7 +101,7 @@ export default {
 </style>
 ```
 
-### Require this file in: /resources/js/app.js
+#### Require this file in: /resources/js/app.js
 
 ```
 Vue.component(
@@ -110,21 +110,21 @@ Vue.component(
 );
 ```
 
-### Remove requirments for bootstrap in the same file as above
+#### Remove requirments for bootstrap in the same file as above
 
 ```
 /* require('./bootstrap'); */
 ```
 
-### Add CSRF in welcome.blade.php or in your template blade file to get rid of console warning error about csrf-token.
+##### Add CSRF in welcome.blade.php or in your template blade file to get rid of console warning error about csrf-token
 
-### Create tailwind.config.js file in the root
+#### Create tailwind.config.js file in the root
 
 ```
 touch tailwind.config.js
 ```
 
-### That is it! Run any commands you wish (package.json)
+#### That is it! Run any commands you wish (package.json)
 
 ```
 npm install
@@ -134,6 +134,6 @@ php artisan serve
 npm run prod
 ```
 
-### Files included are samples you can use to replace or copy into your original files as per instructions above.
+#### Files included are samples you can use to replace or copy into your original files as per instructions above
 
 **_Happy coding_**
