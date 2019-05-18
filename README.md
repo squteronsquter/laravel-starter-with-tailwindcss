@@ -62,7 +62,7 @@ postCss: [tailwindcss('./tailwind.config.js')]
         <div id="app" class="container mx-auto p-4">
             <custom-component></custom-component>
             <h1 class="text-6xl">Welcome to Laravel with Tailwind</h1>
-            <p class="italic text-3xl">Tailwind CSS is preatty awesome!</p>
+            <p class="italic text-3xl">Tailwind CSS is pretty awesome!</p>
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">This text is responsvie. Check it out for various screens.</p>
             <example-component></example-component>
         </div>
