@@ -125,15 +125,7 @@ Vue.component(
 touch tailwind.config.js
 ```
 
-#### That is it! Run any commands you wish (package.json)
-
-```
-npm install
-npm run dev
-npm run watch
-php artisan serve
-npm run prod
-```
+#### Include eg. your custom code in this file or all of the original tailwindcss configuration file and modify it to your tast or purpose. The original file content is included with this repo.
 
 #### To reduce the size of Tailwind CSS output file in production use PurgeCSS
 
@@ -168,6 +160,16 @@ mix.js('resources/js/app.js', 'public/js')
 npm run prod
 ```
 
-#### Files included are samples you can use to replace or copy into your original files as per instructions above
+#### That is it! Run any commands you wish from package.json
+
+```
+npm install
+npm run dev
+npm run watch
+npm run prod
+php artisan serve
+```
+
+#### Files included with this repo are samples you can use to replace or copy into your original files as per instructions above
 
 **_Happy coding_**
